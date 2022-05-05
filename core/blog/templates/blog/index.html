@@ -1,0 +1,16 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block a %}
+	<h2 style="text-align:center">1 - {{ my_name }}</h2>
+{% endblock %}
+
+{% block b %}
+    {% for name in names %}
+	    <h2 style="text-align:center">2 - из цикла: {{ name }} </h2>
+    {% endfor %}
+{% endblock %}
+
+{% block c %}
+	<h2 style="text-align:center">3 - трерье окно </h2>
+{% endblock %}
+

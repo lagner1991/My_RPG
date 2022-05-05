@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Здесь будет рости мой блог')
-
+    context_dict = {'my_name': 'LAGNER_1991', 'names': ['Eva', 'Olga', 'Tata']}
+    return render(request, template_name='blog/index.html', context=context_dict)
