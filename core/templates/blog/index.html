@@ -1,9 +1,8 @@
 {% extends 'blog/base_blog.html' %}
 
 {% block a %}
-	<h2 style="text-align:center">1 - {{ one }} </h2>
+    {% for post in posts %}
+	    <h2 style="text-align:center">Обработано в Django: {{ post.title }} {{ post.slug }} {{ post.date_pub }} </h2>
+    {% endfor %}
 {% endblock %}
 
-{% block b %}
-	<h2 style="text-align:center">2 - {{ two }} </h2>
-{% endblock %}

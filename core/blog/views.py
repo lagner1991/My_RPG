@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from .models import Post
 
 
 def index(request):
-    context_dict = {'one': 'первый', 'two': 'второй', 'three': 'третий'}
-    return render(request, template_name='blog/index.html', context=context_dict)
+    posts = Post.objects.all()
+    return render(request, template_name='blog/index.html', context={'posts': posts})
